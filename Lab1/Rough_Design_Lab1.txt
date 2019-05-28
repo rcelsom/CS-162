@@ -1,0 +1,53 @@
+Design for Lab 1
+
+//header files just contain the function declarations
+readMatrix.hpp
+	#include gaurds
+	void readMatrix(int* ptrArray[] , int matrixSize)
+	
+readMatrix.cpp
+	#include "*.hpp"
+	void readMatrix(int* ptrArray[] , int matrixSize)
+		
+		if matrixSize == 2
+			prompt to input 4 numbers
+			assign 4 numbers to matrixSize
+			
+		else 
+			prompt to input 9 numbers
+			assign 9 nubers to matrixSize
+			
+determinate.hpp
+	#include guards
+	int determinate(int* detMatrix[], int detMatrixSize)
+	
+determinate.cpp
+	#include "*.cpp"
+	int determinate(int* detMatrix[], int detMatrixSize)
+		if detMatrixSize == 2
+			determinate = calculate det of 2x2 matrix
+		
+		else
+			determinate= caculate det of 3x3 matrix
+			
+		return determinate;
+	
+main.cpp
+	prompt user to choose either 2x2 or 3x3 matrix
+	cin >> size
+	
+	dyanamically allocate memory for matrix as array var
+	
+	readMatrix(array,  size)
+	
+	matrixDeterminate = determinate(array, size)
+
+	
+	cout the matrix in swquare form (do not output in a line) and matrixDeterminate
+	
+	deallocate array
+	
+	
+MakeFile:
+	Watch lecture on how to make
+	

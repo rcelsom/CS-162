@@ -1,0 +1,16 @@
+Name: Andrew Dwyer
+Age: 23
+GPA: 1.5
+
+Name: April Ludgate
+Age: 19
+GPA: 3.8
+
+Name: Ron Swanson
+Age: 54
+Rating: 5.0
+
+Name: Garry Jerry Larry Gergich Gengurch
+Age: 72
+Rating: 0.0
+

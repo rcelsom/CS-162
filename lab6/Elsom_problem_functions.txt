@@ -1,0 +1,62 @@
+void linkedList::addToHead(int num)	{
+	//if list is empty
+	if (head == nullptr)	{
+		head = new Node(num);
+		//point head and tail to same element
+		tail = head;
+	}
+	
+	else	{
+		//change head to new element and point new element to prev head
+		Node *oldPtr = head;
+		head = new Node(num);
+		head->next = oldPtr;
+		//change prev new element to null and prev tail to new element
+		oldPtr->previous = head;
+		head->previous = nullptr;
+	}
+	
+	printList();
+}
+
+
+void linkedList::deleteFromHead()	{
+	
+	if (head==nullptr)	{
+		cout << endl << "Sorry, this list is empty." << endl;
+	}
+	
+	//if only one element
+	else if (head->next == nullptr)	{
+		garbage = head;
+		tail = nullptr;
+		head = nullptr;
+		delete garbage;
+		cout << endl << "The list is now empty." << endl;
+	}
+	
+	else	{
+		garbage = head;
+		head = head->next;
+		delete garbage;
+		head->previous = nullptr;
+		printList();
+	}
+}
+
+
+
+void linkedList::printList()	{
+	
+	if (head == nullptr)	{
+		cout << endl << "There are no values to print" << endl;
+	}
+	else	{
+		nodePtr = head;
+		cout << endl << "The node values are: " << endl;
+		while (nodePtr != nullptr)	{
+			cout << nodePtr->val << "   ";
+			nodePtr = nodePtr->next;
+		}
+	}
+}
